@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+
+body {
+    padding: 50px 100px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 250px;
+    gap: 15px;
+    font-size: 25px;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    width: 250px;
+    gap: 2.5px;
+}
+
+button {
+    width : 60px;
+    height: 60px;
+    font-size: 25px;
+}
