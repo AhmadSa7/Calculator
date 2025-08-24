@@ -9,24 +9,24 @@
 <body>
      <div class="container">
 
-        <div class="display"> 150 </div>
+        <div id="display">  </div>
         <div class="buttons">
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>+</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>-</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>*</button>
-        <button>0</button>
-        <button>/</button>
-        <button>=</button>
-        <button>C</button>
+            <button onclick="getNum(1)" class="number">1</button>
+            <button onclick="getNum(2)" class="number">2</button>
+            <button onclick="getNum(3)" class="number">3</button>
+            <button onclick="getOperator('+')" class="operator">+</button>
+            <button onclick="getNum(4)" class="number">4</button>
+            <button onclick="getNum(5)" class="number">5</button>
+            <button onclick="getNum(6)" class="number">6</button>
+            <button onclick="getOperator('-')" class="operator">-</button>
+            <button onclick="getNum(7)" class="number">7</button>
+            <button onclick="getNum(8)" class="number">8</button>
+            <button onclick="getNum(9)" class="number">9</button>
+            <button onclick="getOperator('*')" class="operator">*</button>
+            <button onclick="getNum(0)" class="number">0</button>
+            <button onclick="getOperator('/')" class="operator">/</button>
+            <button onclick="calculate()" class="equals">=</button>
+            <button onclick="clearDisplay()" class="clear">C</button>
         </div>
 
      </div>   
