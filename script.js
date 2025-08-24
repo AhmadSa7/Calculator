@@ -19,6 +19,9 @@ function operate(num1, num2, operator) {
     } else if (operator == "*") {
         return multiply(num1, num2);
     } else if (operator == "/") {
+        if (num2 == 0) {
+            return "Error, can't divide by 0";
+        } 
         return divide(num1, num2);
     }
 }
@@ -33,9 +36,11 @@ let numOneArr = [];
 let numTwoArr = [];
 let operator = "";
 let step = 0;
+let result;
 
 
 function getNum(num) {
+    
     if (step === 0 || step == 1) {
         numOneArr.push(num);
         num1 = Number(numOneArr.join(''));
@@ -45,8 +50,11 @@ function getNum(num) {
         numTwoArr.push(num);
         num2 = Number(numTwoArr.join(''));
         display.textContent = num2;
+        
     }
 }
+    
+
 
 function getOperator(op) {
     if (operator) {
@@ -79,12 +87,17 @@ function clearDisplay() {
 
 
 function calculate() {
-    
-    let result = operate(num1, num2, operator);
-    
+    if (num1 && num2 && operator) {
+    result = operate(num1, num2, operator);
     display.textContent = result;
+    num1 = 0;
+    num2 = 0;
+    numOneArr = [];
+    numTwoArr = [];
+    step = 0;
+    }
 
-
+    
     // content = display.textContent;
     // contentSplit = content.match(/(\d+\.\d+|\d+|[+\-*/()]|(?<=\d|\))-\d+)/g);
     // num1 = Number(contentSplit[0]);
